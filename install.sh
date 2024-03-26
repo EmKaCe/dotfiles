@@ -5,6 +5,11 @@ echo "Installing packages via yay"
 /bin/bash "$(dirname $0)/yay.sh"
 echo "\n\n\n\n\n"
 
+# Flatpak
+echo "Installing Flatpaks"
+/bin/bash "$(dirname $0)/flatpak.sh"
+echo "\n\n\n\n\n"
+
 # SDDM
 echo "Installing SDDM Theme"
 
@@ -29,11 +34,5 @@ echo "\n\n\n\n\n"
 
 
 # Rofi
-
-
-
-# Flatpak
-
-
 
 
