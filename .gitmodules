@@ -1,0 +1,3 @@
+[submodule "sddm/catpuccin"]
+	path = sddm/catpuccin
+	url = https://github.com/catppuccin/sddm.git
