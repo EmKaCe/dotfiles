@@ -14,7 +14,7 @@ echo "\n\n\n\n\n"
 echo "Installing SDDM Theme"
 
 ## Install dependencies
-sudo pacman -Syu just zip --noconfirm
+sudo pacman -Syu sddm just zip --noconfirm
 
 ## Build & Install themes
 cd "$(dirname $0)/sddm/catppuccin"
@@ -24,10 +24,11 @@ sudo just install
 sudo cp "$(dirname $0)/sddm/sddm.conf" /etc/sddm.conf
 echo "\n\n\n\n\n"
 
-# Install Cursors
-yay -S catppuccin-cursors-mocha --noconfirm
-
 # Hyprland
+echo "Installing Hyprland and dependencies"
+yay -S hyprcursor-git hypridle-git hyprlock-git hyprpaper-git xdg-desktop-portal-hyprland-git hyprland-git --noconfirm
+
+# Install cursor
 
 
 
