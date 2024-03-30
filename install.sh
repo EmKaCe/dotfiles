@@ -17,7 +17,7 @@ echo "Installing SDDM Theme"
 sudo pacman -Syu just zip --noconfirm
 
 ## Build & Install themes
-cd "$(dirname $0)/sddm/catpuccin"
+cd "$(dirname $0)/sddm/catppuccin"
 sudo just install
 
 ## Change theme to mocha
