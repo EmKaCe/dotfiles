@@ -24,6 +24,8 @@ sudo just install
 sudo cp "$(dirname $0)/sddm/sddm.conf" /etc/sddm.conf
 echo "\n\n\n\n\n"
 
+# Install Cursors
+yay -S catppuccin-cursors-mocha --noconfirm
 
 # Hyprland
 
@@ -35,4 +37,4 @@ echo "\n\n\n\n\n"
 
 # Rofi
 
-
+# etc
