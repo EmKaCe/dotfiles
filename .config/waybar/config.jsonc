@@ -1,0 +1,119 @@
+{
+	// Layout
+	"height": 30, // Height of waybar in pixels
+	"spacing": 4, // Spacing between modules in pixels
+	// List of modules to display on the left side
+	"modules-left": [
+		"custom/logo",
+		"hyprland/workspaces"
+	],
+	// List of modules to display in the center
+	"modules-center": [
+		"clock"
+	],
+	// List of modules to display on the right side
+	"modules-right": [
+		"memory",
+		"cpu",
+		"tray",
+		"bluetooth",
+		"network",
+		"battery"
+	],
+	// Modules
+	// Custom Logo
+	"custom/logo": {
+		"format": "", // EndeavourOS logo
+		"tooltip": "Open run menu",
+		"on-click": "rofi -show run"
+	},
+	// Hyprland Workspaces
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"tooltip": false,
+		"all-outputs": true,
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+	// Clock
+	"clock": {
+		"interval": 1, // Update every second
+		"format": "KW %U  %a, %d.%m.%Y  %H:%M:%S",
+		"tooltip": "Open calendar",
+		"on-click": "gnome-calendar"
+	},
+	// Memory
+	"memory": {
+		"interval": 5, // Update every 5 seconds
+		"format": " {used}/{total} GB",
+		"tooltip": "Open btop",
+		"on-click": "btop"
+	},
+	// CPU
+	"cpu": {
+		"interval": 5, // Update every 5 seconds
+		"format": "{icon0}{icon1}{icon2}{icon3} {icon4}{icon5}{icon6}{icon7} {icon8}{icon9}{icon10}{icon11} {icon12}{icon13}{icon14}{icon15}",
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		],
+		"tooltip": "Open btop",
+		"on-click": "btop"
+	},
+	// Tray
+	"tray": {
+		"icon-size": 16,
+		"spacing": 4
+	},
+	// Bluetooth
+	"bluetooth": {
+		"interval": 30, // Update every 30 seconds
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-connected": "󰂰",
+		"format-disabled": "",
+		"tooltip-format-on": "{icon} {controller_address}",
+		"tooltip-format-off": "{icon} Bluetooth is off",
+		"tooltip-format-connected": "{device}",
+		"on-click": "blueman-manager"
+	},
+	// Network
+	"network": {
+		"interval": 5, // Update every 5 seconds
+		"interface": "wlan0", // Interface to monitor
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"format-up": "{icon} {essid} {bandwidthTotalBytes} B/s",
+		"format-down": "{icon}",
+		"tooltip-up": "{ipaddr}",
+		"tooltip-down": "{icon} {interface} is down",
+		"on-click": "nm-connection-editor"
+	},
+	// Battery
+	"battery": {
+		"interval": 60, // Update every 30 seconds
+		"format": "{icon} {percentage}% {time}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": "{icon} {percentage}% {time}",
+		"on-click": "gnome-power-statistics"
+	}
+}
