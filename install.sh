@@ -26,7 +26,8 @@ echo "\n\n\n\n\n"
 
 # Hyprland
 echo "Installing Hyprland and dependencies"
-yay -S hyprcursor-git hypridle-git hyprlock-git hyprpaper-git xdg-desktop-portal-hyprland-git hyprland-git --noconfirm
+yay -S hyprcursor-git hypridle-git hyprlock-git hyprpaper-git xdg-desktop-portal-hyprland-git hyprland-git grimblast-git cliphist wl-clipboard rofi-lbonn-wayland-git dunst polkit-kde-agent qt5-wayland qt6-wayland --no-confirm
+
 
 # Install cursor
 

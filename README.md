@@ -6,6 +6,10 @@ This repository is a collection of my dotfiles and installer scripts to get my s
 
 ### Desktop Environment
 - Hyprland
+- Hyprlock
+- Hyprpaper
+- Hypridle
+- Hyprcursor
 - Waybar
 - Rofi
 
