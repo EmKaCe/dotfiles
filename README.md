@@ -13,6 +13,9 @@ This repository is a collection of my dotfiles and installer scripts to get my s
 - Waybar
 - Rofi
 
+### Cursors
+- Using my fork of [catppuccin-cursors](https://github.com/EmKaCe/catppuccin-hyprcursors) (original [here](https://github.com/catppuccin/cursors))
+
 ### Shell
 - zsh + zsrhc
 - oh my zsh
