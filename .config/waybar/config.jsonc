@@ -42,7 +42,7 @@
 		"interval": 1, // Update every second
 		"format": "KW %U  %a, %d.%m.%Y  %H:%M:%S",
 		"tooltip": "Open calendar",
-		"on-click": "gnome-calendar"
+		"on-click": "flatpak run org.mozilla.Thunderbird -calendar"
 	},
 	// Memory
 	"memory": {

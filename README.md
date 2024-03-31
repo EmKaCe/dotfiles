@@ -78,7 +78,6 @@ This repository is a collection of my dotfiles and installer scripts to get my s
 - obsidian
 - okular
 - openssl
-- openssl-1.1
 - openvpn
 - p11-kit
 - platformio-core

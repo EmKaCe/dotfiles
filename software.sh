@@ -53,7 +53,6 @@ packages=(
   "obsidian"
   "okular"
   "openssl"
-  "openssl-1.1"
   "openvpn"
   "p11-kit"
   "platformio-core"
