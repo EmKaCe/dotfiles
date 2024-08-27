@@ -1,0 +1,54 @@
+# Global
+[init]
+    defaultBranch = main
+
+[web]
+    browser = brave
+
+[diff]
+    tool = meld
+
+[difftool]
+    primpt = false
+
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+# Sign commits by default
+[commit]
+	gpgSign = false
+
+
+
+# Identities
+# Default to GitHub
+[user]
+	name = Emre Çetin
+	email = 20030146+EmKaCe@users.noreply.github.com
+	signingKey = ""
+
+[gpg]
+	format = openpgp
+	program = gpg
+
+# vm-2d21
+[includeIf "gitdir:~/vm-2d21/**"]
+    path = ~/vm-2d21/.gitconfig
+
+# AUR
+[includeIf "gitdir:~/aur/**"]
+    path = ~/aur/.gitconfig
+
+# fslab
+[includeIf "gitdir:~/Work/**"]
+    path = ~/Work/.gitconfig
+[tag]
+    forceSignAnnotated = false
+
+# gitlab.fachschaften.org
+[includeIf "gitdir:~/fachschaften/**"]
+	path = ~/fsorg/.gitconfig
+
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ""
