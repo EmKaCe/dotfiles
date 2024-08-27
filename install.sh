@@ -114,17 +114,17 @@ install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli np
 ## Neovim: Install
 install_pkg neovim python-pynvim
 ## Neovim: Add config
-ln -s config/nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+ln -s $PWD/config/nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 
 # ZSH:
 ## ZSH: Add config files
-cp zshrc $HOME/.zshrc
-cp p10k.zsh $HOME/.p10k.zsh
-cp zsh_plugins.txt $HOME/.zsh_plugins.txt
+ln -s $PWD/zshrc $HOME/.zshrc
+ln -s $PWD/p10k.zsh $HOME/.p10k.zsh
+ln -s $PWD/zsh_plugins.txt $HOME/.zsh_plugins.txt
 
 # Git
 ## Git: Add gitconfig
-cp gitconfig $HOME/.gitconfig
+ln -s gitconfig $HOME/.gitconfig
 
 ## ZSH: Set default shell to ZSH
 sudo chsh -s /usr/bin/zsh $USER

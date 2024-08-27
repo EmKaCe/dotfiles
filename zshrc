@@ -29,6 +29,10 @@ antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 # Keybinds
 source $HOME/.config/zsh/key-bindings.zsh
 
+# Set Browser env var
+alias brave-browser='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=brave --file-forwarding com.brave.Browser @@u %U @@'
+export BROWSER=brave-browser
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
