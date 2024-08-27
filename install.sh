@@ -74,6 +74,8 @@ install_flatpak org.signal.Signal
 install_flatpak org.raspberrypi.rpi-imager
 ## Flatpak: Galaxy Buds Manager
 install_flatpak me.timschneeberger.GalaxyBudsClient
+## Flatpak: Vesktop
+install_flatpak dev.vencord.Vesktop
 
 # Software
 ## Easyroam
