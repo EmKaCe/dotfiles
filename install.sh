@@ -109,7 +109,7 @@ install_pkg rustup
 
 # Neovim
 ## Neovim: Dependencies
-install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli
+install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli npm
 /usr/bin/pnpm add -g typescript
 ## Neovim: Install
 install_pkg neovim python-pynvim
