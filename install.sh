@@ -1,5 +1,7 @@
 #!/bin/bash
 
+HERE=$(dirname $(realpath "$0"))
+
 function install_pkg() {
   /usr/bin/paru -S "$@" --noconfirm --sudoloop
 }
@@ -39,18 +41,18 @@ install_pkg zsh-antidote
 ## ZSH: P10K
 install_pkg zsh-theme-powerlevel10k-git
 ## ZSH: Install plugin dependencies
-install_pkg pyenv pnpm bat eza go python-poetry thefuck wl-clipboard
+install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard
 
 # Misc
 ## Misc: Fix Realtek WiFi
 ## Misc: Flatpak auto update systemd timers
-sudo cp -r etc /
+sudo cp -r "$HERE/etc" /
 
 ## Misc: Add .config files
-cp -r config/ $HOME/.config/
+cp -r "$HERE/config/" "$HOME/.config"
 
 ## Misc: Add .local files
-cp -r local/ $HOME/.local/
+cp -r "$HERE/local/" "$HOME/.local/"
 
 # Flatpak
 ## Flatpak: install
@@ -94,6 +96,9 @@ install_vsc_ext GrapeCity.gc-excelviewer
 install_vsc_ext tomoki1207.pdf
 install_vsc_ext ms-vscode-remote.remote-containers
 install_vsc_ext ms-azuretools.vscode-docker
+install_vsc_ext myriad-dreamin.tinymist
+install_vsc_ext nvarner.typst-lsp
+install_vsc_ext njpwerner.autodocstring
 
 ## IntelliJ
 install_pkg intellij-idea-ultimate-edition
@@ -116,17 +121,17 @@ install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli np
 ## Neovim: Install
 install_pkg neovim python-pynvim
 ## Neovim: Add config
-ln -s $PWD/config/nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+ln -s "$HERE/config/nvim" "${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 
 # ZSH:
 ## ZSH: Add config files
-ln -s $PWD/zshrc $HOME/.zshrc
-ln -s $PWD/p10k.zsh $HOME/.p10k.zsh
-ln -s $PWD/zsh_plugins.txt $HOME/.zsh_plugins.txt
+ln -s "$HERE/zshrc" "$HOME/.zshrc"
+ln -s "$HERE/p10k.zsh" "$HOME/.p10k.zsh"
+ln -s "$HERE/zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
 
 # Git
 ## Git: Add gitconfig
-ln -s gitconfig $HOME/.gitconfig
+ln -s "$HERE/gitconfig" "$HOME/.gitconfig"
 
 ## ZSH: Set default shell to ZSH
 sudo chsh -s /usr/bin/zsh $USER

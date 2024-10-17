@@ -36,7 +36,9 @@ export BROWSER=brave-browser
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # pnpm
 export PNPM_HOME="/home/emre/.local/share/pnpm"
@@ -54,9 +56,9 @@ alias yay='_paru_with_sudo'
 
 function _paru_with_sudo() {
     if [ $# -eq 0 ]; then
-        /usr/bin/paru -Syu --sudoloop
+        /usr/bin/paru -Syu --sudoloop --skipreview
     else
-        /usr/bin/paru "$@" --sudoloop
+        /usr/bin/paru "$@" --sudoloop --skipreview
     fi
 }
 
