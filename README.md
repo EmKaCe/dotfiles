@@ -1,0 +1,49 @@
+# Dotfiles
+These files are for my personal config. Running on EndeavourOS using KDE and Wayland.
+
+## What does this install?
+- Loads the [RTW89 wireless module](https://wiki.archlinux.org/title/Network_configuration/Wireless#RTW88) 
+- Replaces [yay](https://github.com/Jguer/yay) with [paru](https://github.com/Morganamilo/paru)
+- Installs docker and [oxker](https://github.com/mrjackwills/oxker)
+- Changes shell with Z-Shell
+  - Uses antidote
+  - bat + extras
+  - eza
+  - Powerlevel10K
+  - pyenv
+  - pyenv-virtualenv
+  - thefuck
+- Installs [flatpak](https://flatpak.org/) and various applications
+  - Ǵalaxy Buds Manager
+  - ProtonVPN
+  - qBittorrent
+  - Raspberry Pi Imager
+  - Signal Desktop
+  - Thunderbird
+  - Vesktop
+- Adds systemd-service that auto-updates flatpaks
+- Installs additional system-packages
+  - easyroam
+  - Visual Studio Code + Extensions
+    - GitHub.copilot
+    - GrapeCity.gc-excelviewer
+    - Gruntfuggly.todo-tree
+    - mechatroner.rainbow-csv
+    - ms-azuretools.vscode-docker
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - ms-vscode-remote.remote-containers
+    - myriad-dreamin.tinymist
+    - njpwerner.autodocstring
+    - nvarner.typst-lsp
+    - rust-lang.rust-analyzer
+    - svelte.svelte-vscode
+    - tomoki1207.pdf
+  - CLion
+  - IntelliJ Ultimate Edition
+  - PyCharm Professional
+  - PlatformIO
+  - Ventoy
+  - rustup
+- NeoVim
+  - Config based on kickstart.nvim
