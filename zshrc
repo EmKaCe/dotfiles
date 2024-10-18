@@ -1,5 +1,5 @@
 # Add deno completions to search path
-if [[ ":$FPATH:" != *":/home/emre/.zsh/completions:"* ]]; then export FPATH="/home/emre/.zsh/completions:$FPATH"; fi
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="/home/emre/.zsh/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -43,7 +43,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # pnpm
-export PNPM_HOME="/home/emre/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -79,3 +79,4 @@ function calc() {
     # Replace x with * and ^ with ** for python
     echo $* | sed 's/x/*/g' | sed 's/\^/**/g' | python -c 'print(eval(input()))'
 }
+. "$HOME/.deno/env"
