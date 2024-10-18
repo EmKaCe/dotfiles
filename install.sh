@@ -26,6 +26,10 @@ sudo pacman -S paru --noconfirm
 # Change timeout to 0s
 sudo sed -i 's/timeout 5/timeout 0/g' /efi/loader/loader.conf
 
+# Rust (dependency for some packages)
+install_pkg rustup
+/usr/bin/rustup default stable
+
 # Docker
 ## Docker: Install
 install_pkg docker docker-compose oxker
@@ -110,9 +114,6 @@ install_pkg clion
 install_pkg platformio-core platformio-core-udev
 ## Ventoy
 install_pkg ventoy-bin
-## Rust
-install_pkg rustup
-/usr/bin/rustup default stable
 
 # Neovim
 ## Neovim: Dependencies
