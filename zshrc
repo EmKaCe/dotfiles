@@ -66,6 +66,13 @@ function _paru_with_sudo() {
 
 compdef _paru_with_sudo=paru
 
+alias pacsearch='_search_with_paru'
+
+function _search_with_paru() {
+    /usr/bin/paru -Ss "$@"
+}
+
+compdef _search_with_paru=pacsearch
 
 # tree
 alias tree='eza -T --icons'
