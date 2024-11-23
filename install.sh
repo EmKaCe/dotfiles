@@ -55,10 +55,14 @@ install_pkg pacseek
 sudo cp -r "$HERE/etc" /
 
 ## Misc: Add .config files
-cp -r "$HERE/config/" "$HOME/.config"
+for file in $HERE/config/*; do
+  ln -s "$file" "$HOME/.config/$(basename $file)";
+done
 
-## Misc: Add .local files
-cp -r "$HERE/local/" "$HOME/.local/"
+## Misc: Add .local/share/ files
+for file in $HERE/local/share/*; do
+  ln -s "$file" "$HOME/.local/share/$(basename $file)";
+done
 
 # Flatpak
 ## Flatpak: install
@@ -123,14 +127,6 @@ install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli np
 /usr/bin/pnpm add -g typescript
 ## Neovim: Install
 install_pkg neovim python-pynvim
-## Neovim: Add config
-ln -s "$HERE/config/nvim" "${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
-
-# ZSH:
-## ZSH: Add config files
-ln -s "$HERE/zshrc" "$HOME/.zshrc"
-ln -s "$HERE/p10k.zsh" "$HOME/.p10k.zsh"
-ln -s "$HERE/zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
 
 # Git
 ## Git: Add gitconfig
