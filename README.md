@@ -54,9 +54,11 @@ These files are for my personal config. Running on EndeavourOS using KDE and Way
   - Only slight changes
 
 ## How to install
-- Clone this repo **with** submodules
+- Clone this repo **with** submodules.
 ```sh
 git clone --recurse-submodules https://github.com/EmKaCe/dotfiles.git
 ```
+- Note: If you wish to only use this as a basis to create your own dotfiles repo, create a fork and clone your fork instead!
 - Run install.sh
 - You might have to enter your sudo password a couple of times
+- **Important:** Do **not** remove the cloned directory, symlinks are being used.
