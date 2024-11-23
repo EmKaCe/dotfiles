@@ -46,6 +46,8 @@ install_pkg zsh-antidote
 install_pkg zsh-theme-powerlevel10k-git
 ## ZSH: Install plugin dependencies
 install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard
+## Pacseek
+install_pkg pacseek
 
 # Misc
 ## Misc: Fix Realtek WiFi
