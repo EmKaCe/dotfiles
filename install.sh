@@ -45,7 +45,7 @@ install_pkg zsh-antidote
 ## ZSH: P10K
 install_pkg zsh-theme-powerlevel10k-git
 ## ZSH: Install plugin dependencies
-install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard
+install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard poetry
 ## Pacseek
 install_pkg pacseek
 

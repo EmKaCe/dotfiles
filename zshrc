@@ -87,3 +87,6 @@ function calc() {
     echo $* | sed 's/x/*/g' | sed 's/\^/**/g' | python -c 'print(eval(input()))'
 }
 . "$HOME/.deno/env"
+
+# Poetry
+export PATH="$HOME/.local/bin:$PATH"
