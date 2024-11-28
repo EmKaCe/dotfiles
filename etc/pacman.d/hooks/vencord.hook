@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = discord
+
+[Action]
+Description = Patch vencord
+When = PostTransaction
+Exec =/bin/bash -c 'sudo -u username /opt/scripts/update_vencord.sh'

@@ -50,8 +50,17 @@ install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry t
 install_pkg pacseek
 
 # Misc
+## Misc: Edit Vencord update hook
+sed -i -e "s/username/$USER/g" $HERE/etc/pacman.d/hooks/vencord.hook
+## Misc: Add Vencord update script
+sudo mkdir -p /opt/scripts
+sudo ln -s "$HERE/opt/scripts/update_vencord.sh" "/opt/script/update_vencord.sh"
+sudo chown $USER:$USER /opt/scripts/update_vencord.sh
+sudo chmod 4755 /opt/script/update_vencord.sh
+
 ## Misc: Fix Realtek WiFi
 ## Misc: Flatpak auto update systemd timers
+## Misc: Add Vencord update hook
 sudo cp -r "$HERE/etc" /
 
 ## Misc: Add .config files
@@ -86,8 +95,6 @@ install_flatpak org.signal.Signal
 install_flatpak org.raspberrypi.rpi-imager
 ## Flatpak: Galaxy Buds Manager
 install_flatpak me.timschneeberger.GalaxyBudsClient
-## Flatpak: Vesktop
-install_flatpak dev.vencord.Vesktop
 
 # Software
 ## Easyroam
@@ -120,6 +127,8 @@ install_pkg clion
 install_pkg platformio-core platformio-core-udev
 ## Ventoy
 install_pkg ventoy-bin
+## Discord
+install_pkg discord
 
 # Neovim
 ## Neovim: Dependencies
