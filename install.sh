@@ -45,11 +45,16 @@ install_pkg zsh-antidote
 ## ZSH: P10K
 install_pkg zsh-theme-powerlevel10k-git
 ## ZSH: Install plugin dependencies
-install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard poetry
+install_pkg pyenv pyenv-virtualenv tk pnpm bat bat-extras eza go python-poetry thefuck wl-clipboard poetry deno
 ## Pacseek
 install_pkg pacseek
 
 # Misc
+## Misc: Add ZSH files
+ln -s "$HERE/p10k.zsh" "$HOME/.p10k.zsh"
+ln -s "$HERE/zshrc" "$HOME/.zshrc"
+ln -s "$HERE/zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
+
 ## Misc: Edit Vencord update hook
 sed -i -e "s/username/$USER/g" $HERE/etc/pacman.d/hooks/vencord.hook
 ## Misc: Add Vencord update script
@@ -114,11 +119,10 @@ install_vsc_ext tomoki1207.pdf
 install_vsc_ext ms-vscode-remote.remote-containers
 install_vsc_ext ms-azuretools.vscode-docker
 install_vsc_ext myriad-dreamin.tinymist
-install_vsc_ext nvarner.typst-lsp
 install_vsc_ext njpwerner.autodocstring
 
 ## IntelliJ
-install_pkg intellij-idea-ultimate-edition
+install_pkg intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre
 ## PyCharm
 install_pkg pycharm-professional
 ## CLion

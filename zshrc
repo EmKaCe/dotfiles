@@ -1,5 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="/home/emre/.zsh/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -86,7 +84,6 @@ function calc() {
     # Replace x with * and ^ with ** for python
     echo $* | sed 's/x/*/g' | sed 's/\^/**/g' | python -c 'print(eval(input()))'
 }
-. "$HOME/.deno/env"
 
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
