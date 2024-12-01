@@ -55,8 +55,6 @@ ln -s "$HERE/p10k.zsh" "$HOME/.p10k.zsh"
 ln -s "$HERE/zshrc" "$HOME/.zshrc"
 ln -s "$HERE/zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
 
-## Misc: Edit Vencord update hook
-sed -i -e "s/username/$USER/g" $HERE/etc/pacman.d/hooks/vencord.hook
 ## Misc: Add Vencord update script
 sudo mkdir -p /opt/scripts
 sudo ln -s "$HERE/opt/scripts/update_vencord.sh" "/opt/script/update_vencord.sh"
