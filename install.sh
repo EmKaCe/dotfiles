@@ -140,6 +140,8 @@ install_pkg base-devel git make unzip gcc ripgrep tree-sitter tree-sitter-cli np
 /usr/bin/pnpm add -g typescript
 ## Neovim: Install
 install_pkg neovim python-pynvim
+## Neovim: Add config
+ln -s "$HERE/nvim" "$HOME/.config/nvim"
 
 # Git
 ## Git: Add gitconfig
