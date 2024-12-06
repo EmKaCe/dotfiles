@@ -61,6 +61,9 @@ sudo ln -s "$HERE/opt/scripts/update_vencord.sh" "/opt/script/update_vencord.sh"
 sudo chown $USER:$USER /opt/scripts/update_vencord.sh
 sudo chmod 4755 /opt/script/update_vencord.sh
 
+## Misc: Enable Bluetooth
+sudo systemctl enable --now bluetooth.service
+
 ## Misc: Fix Realtek WiFi
 ## Misc: Flatpak auto update systemd timers
 ## Misc: Add Vencord update hook
