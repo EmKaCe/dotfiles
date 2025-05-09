@@ -7,4 +7,4 @@ Target = discord
 [Action]
 Description = Patch vencord
 When = PostTransaction
-Exec =/bin/bash -c 'sudo -u emre /opt/scripts/update_vencord.sh'
+Exec =/bin/bash -c '/opt/scripts/update_vencord.sh'

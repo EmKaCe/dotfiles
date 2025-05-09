@@ -29,6 +29,14 @@ antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 # Keybinds
 source $HOME/.config/zsh/key-bindings.zsh
 
+# No gstreamer warnings
+export OPENCV_LOG_LEVEL=0
+export OPENCV_VIDEOIO_PRIORITY_INTEL_MFX=0
+
+# use kwallet for ssh passphrases
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
+export SSH_ASKPASS_REQUIRE=prefer
+
 # Set Browser env var
 alias brave-browser='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=brave --file-forwarding com.brave.Browser @@u %U @@'
 export BROWSER=brave-browser
@@ -87,3 +95,4 @@ function calc() {
 
 # Poetry
 export PATH="$HOME/.local/bin:$PATH"
+

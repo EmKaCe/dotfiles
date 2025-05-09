@@ -31,6 +31,10 @@
 	format = openpgp
 	program = gpg
 
+# 44th
+[includeIf "gitdir:~/44th/**"]
+    path = ~/44th/.gitconfig
+
 # vm-2d21
 [includeIf "gitdir:~/vm-2d21/**"]
     path = ~/vm-2d21/.gitconfig
